@@ -13,10 +13,10 @@ import servicio.RevistaServicio;
  * @author User
  */
 public class RevistaControl {
-    private final RevistaServicio revistaServicio = new RevistaServicio();
+   private final RevistaServicio revistaServicio = new RevistaServicio();
     
     public Revista crear(String [] params){
-        var revista = new Revista(Integer.valueOf(params[0]),params[1]);
+        var revista = new Revista(Integer.valueOf(params[0]),params[1],params[2]);
         this.revistaServicio.crear(revista);
         return revista;
     }
